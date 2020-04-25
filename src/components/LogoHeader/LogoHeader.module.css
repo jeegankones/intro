@@ -1,0 +1,16 @@
+@import "../../css/variables.css";
+
+.container {
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--io-white);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--io-primary);
+}
