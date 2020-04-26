@@ -6,7 +6,7 @@ import style from './TabNavigation.module.css';
 
 const TabNavigation = () => (
   <nav className={style.container}>
-    <NavLink className={style.navItem} activeClassName={style.active} to="/home">
+    <NavLink className={style.navItem} activeClassName={style.active} exact to="/">
       <Home size={32} className={style.icon} />
       <div className={style.text}>Home</div>
     </NavLink>

@@ -5,7 +5,7 @@ import styles from './LogoHeader.module.css';
 
 const LogoHeader = () => (
   <div className={styles.container}>
-    <Link className={styles.logo} to="/home">intro</Link>
+    <Link className={styles.logo} to="/">intro</Link>
   </div>
 );
 
