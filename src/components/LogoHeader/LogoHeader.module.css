@@ -2,7 +2,7 @@
 
 .container {
   padding: 15px;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   background-color: var(--io-white);

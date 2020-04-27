@@ -1,4 +1,24 @@
+@import "../../css/variables.css";
+
 .container {
   width: 100%;
-  background-color: #cbcbcb;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 66px;
+  padding-bottom: 15px;
+  background-color: var(--io-white);
+}
+
+.container input {
+  width: 100%;
+  padding: 10px 15px;
+  color: var(--io-dark-grey);
+  background-color: var(--io-lighter-grey);
+  border-radius: 20px;
+  border: var(--io-light-grey) solid 1px;
+}
+
+.container input:focus {
+  outline: none;
 }

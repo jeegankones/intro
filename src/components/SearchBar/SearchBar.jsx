@@ -4,7 +4,7 @@ import style from './SearchBar.module.css';
 
 const SearchBar = () => (
   <div className={style.container}>
-    Search bar
+    <input type="text" placeholder="Search places or categories" />
   </div>
 );
 
