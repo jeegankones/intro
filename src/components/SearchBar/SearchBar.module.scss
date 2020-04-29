@@ -1,4 +1,4 @@
-@import "../../css/variables.css";
+@import "../../scss/variables";
 
 .container {
   width: 100%;
@@ -7,16 +7,16 @@
   position: sticky;
   top: 66px;
   padding-bottom: 15px;
-  background-color: var(--io-white);
+  background-color: $io-white;
 }
 
 .container input {
   width: 100%;
   padding: 10px 15px;
-  color: var(--io-dark-grey);
-  background-color: var(--io-lighter-grey);
+  color: $io-dark-grey;
+  background-color: $io-lighter-grey;
   border-radius: 20px;
-  border: var(--io-light-grey) solid 1px;
+  border: $io-light-grey solid 1px;
 }
 
 .container input:focus {

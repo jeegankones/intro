@@ -2,17 +2,14 @@ import React from 'react';
 import TabNavigation from '../TabNavigation/TabNavigation';
 import LogoHeader from '../LogoHeader/LogoHeader';
 
-import style from './MainLayout.module.css';
+import style from './MainLayout.module.scss';
 
-const MainLayout = (props) => {
-  const { children } = props;
-  return (
-    <>
-      <LogoHeader />
-      <main className={style.container}>{children}</main>
-      <TabNavigation />
-    </>
-  );
-};
+const MainLayout = ({ children }) => (
+  <div className={style.container}>
+    <LogoHeader />
+    <main>{children}</main>
+    <TabNavigation />
+  </div>
+);
 
 export default MainLayout;

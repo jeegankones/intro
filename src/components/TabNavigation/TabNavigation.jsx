@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRightCircle, Home, User } from 'react-feather';
 import { NavLink } from 'react-router-dom';
 
-import style from './TabNavigation.module.css';
+import style from './TabNavigation.module.scss';
 
 const TabNavigation = () => (
   <nav className={style.container}>

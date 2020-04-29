@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from '../../components/SearchBar/SearchBar';
 
-import style from './Home.module.css';
+import style from './Home.module.scss';
 
 const Home = () => (
   <>

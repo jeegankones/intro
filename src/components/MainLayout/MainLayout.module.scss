@@ -1,0 +1,9 @@
+.container {
+  padding: 0 15px 70px;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    padding-left: 95px;
+  }
+}

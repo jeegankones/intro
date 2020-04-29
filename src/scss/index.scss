@@ -1,0 +1,18 @@
+// Third party global styles
+@import "~normalize.css";
+@import "~bootstrap/scss/bootstrap";
+
+// Google font import
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+
+// Project global variables
+@import "variables";
+
+// Bootstrap overrides
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+$primary: $io-primary;
+

@@ -1,0 +1,45 @@
+@import "../../scss/variables";
+
+.container {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  background-color: $io-white;
+}
+
+.navItem {
+  align-items: center;
+  color: $io-dark-grey;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-decoration: none;
+}
+
+.navItem.active {
+  color: $io-primary;
+}
+
+.navItem .icon {
+  margin-bottom: 5px;
+}
+
+.navItem .text {
+  font-size: 12px;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    height: 100vh;
+    width: 80px;
+    flex-direction: column;
+    background-color: $io-lighter-grey;
+  }
+
+  .navItem {
+    /*color: var(--io-white);*/
+  }
+}
