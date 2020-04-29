@@ -1,5 +1,5 @@
-@import "../../scss/variables";
-
+@import "src/scss/variables";
+@import "src/scss/bootstrap/bootstrap-mixins";
 .container {
   bottom: 0;
   left: 0;
@@ -8,6 +8,13 @@
   padding: 10px;
   display: flex;
   background-color: $io-white;
+
+  @include media-breakpoint-up(sm) {
+    height: 100vh;
+    width: 80px;
+    flex-direction: column;
+    background-color: $io-lighter-grey;
+  }
 }
 
 .navItem {
@@ -17,29 +24,20 @@
   flex-direction: column;
   flex: 1;
   text-decoration: none;
-}
 
-.navItem.active {
-  color: $io-primary;
-}
-
-.navItem .icon {
-  margin-bottom: 5px;
-}
-
-.navItem .text {
-  font-size: 12px;
-}
-
-@media screen and (min-width: 576px) {
-  .container {
-    height: 100vh;
-    width: 80px;
-    flex-direction: column;
-    background-color: $io-lighter-grey;
+  &.active {
+    color: $io-primary;
   }
 
-  .navItem {
-    /*color: var(--io-white);*/
+  &:hover {
+    text-decoration: none;
+  }
+
+  .icon {
+    margin-bottom: 5px;
+  }
+
+  .text {
+    font-size: 12px;
   }
 }

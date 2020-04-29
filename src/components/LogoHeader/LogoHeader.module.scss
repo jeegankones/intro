@@ -1,4 +1,4 @@
-@import "../../scss/variables";
+@import "src/scss/variables";
 
 .container {
   padding: 15px 0;
@@ -11,6 +11,10 @@
 .logo {
   font-weight: bold;
   font-size: 2rem;
-  text-decoration: none;
+  //text-decoration: none;
   color: $io-primary;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
