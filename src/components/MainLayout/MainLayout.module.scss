@@ -1,9 +1,7 @@
-.container {
-  padding: 0 15px 70px;
-}
+@import "src/scss/bootstrap/bootstrap-mixins";
 
-@media screen and (min-width: 576px) {
+@include media-breakpoint-down(xs) {
   .container {
-    padding-left: 95px;
+    padding-bottom: 70px;
   }
 }

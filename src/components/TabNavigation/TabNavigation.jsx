@@ -1,11 +1,12 @@
 import React from 'react';
 import { ArrowRightCircle, Home, User } from 'react-feather';
 import { NavLink } from 'react-router-dom';
+import cn from 'classnames';
 
 import style from './TabNavigation.module.scss';
 
 const TabNavigation = () => (
-  <nav className={style.container}>
+  <nav className={cn(style.container, 'd-sm-none')}>
     <NavLink className={style.navItem} activeClassName={style.active} exact to="/">
       <Home size={32} className={style.icon} />
       <div className={style.text}>Home</div>

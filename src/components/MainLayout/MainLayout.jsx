@@ -7,7 +7,7 @@ import style from './MainLayout.module.scss';
 const MainLayout = ({ children }) => (
   <div className={style.container}>
     <LogoHeader />
-    <main>{children}</main>
+    <main className="container">{children}</main>
     <TabNavigation />
   </div>
 );

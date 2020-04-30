@@ -1,20 +1,30 @@
 @import "src/scss/variables";
 
 .container {
-  padding: 15px 0;
+  padding: 15px;
   position: sticky;
   top: 0;
   width: 100%;
+  max-width: 1400px;
   background-color: $io-white;
 }
 
 .logo {
   font-weight: bold;
   font-size: 2rem;
-  //text-decoration: none;
   color: $io-primary;
 
   &:hover {
     text-decoration: none;
+  }
+}
+
+.nav a {
+  color: $io-dark-grey;
+  text-decoration: none;
+  font-weight: bold;
+
+  &.active {
+    color: $io-primary;
   }
 }
