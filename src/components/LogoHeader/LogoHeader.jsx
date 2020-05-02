@@ -12,6 +12,7 @@ const LogoHeader = () => (
       </div>
       <div className="col-auto d-none d-sm-block">
         <nav className={styles.nav}>
+          <NavLink to="/" exact activeClassName={styles.active} className="mr-4">Explore</NavLink>
           <NavLink to="/intros" activeClassName={styles.active} className="mr-4">Intros</NavLink>
           <NavLink to="/profile" activeClassName={styles.active}>Profile</NavLink>
         </nav>
