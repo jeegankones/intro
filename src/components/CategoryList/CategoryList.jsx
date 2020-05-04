@@ -38,7 +38,7 @@ const CategoryList = () => {
   const categoryList = categories.map(
     (category) => (
       <Category
-        className="col-12 col-sm-4"
+        className="col-12 col-md-4"
         key={category.category_id}
         name={category.category_name}
         imageUrl={category.image_url}

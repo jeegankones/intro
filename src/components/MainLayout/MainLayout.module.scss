@@ -1,6 +1,6 @@
 @import "src/scss/bootstrap/bootstrap-mixins";
 
-@include media-breakpoint-down(xs) {
+@include media-breakpoint-down(sm) {
   .container {
     padding-bottom: 70px;
   }

@@ -6,7 +6,7 @@ import cn from 'classnames';
 import style from './TabNavigation.module.scss';
 
 const TabNavigation = () => (
-  <nav className={cn(style.container, 'd-sm-none')}>
+  <nav className={cn(style.container, 'd-md-none')}>
     <NavLink className={style.navItem} activeClassName={style.active} exact to="/">
       <Search size={32} className={style.icon} />
       <div className={style.text}>Explore</div>
