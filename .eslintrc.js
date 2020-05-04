@@ -24,6 +24,10 @@ module.exports = {
     'react',
   ],
   rules: {
-    'react/prop-types': 0
+    'react/prop-types': 0,
+    'no-unused-vars': 1,
+    'comma-dangle': ['error', {
+      'functions': 'never'
+    }]
   },
 };

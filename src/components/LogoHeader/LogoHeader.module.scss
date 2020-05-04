@@ -7,6 +7,7 @@
   width: 100%;
   max-width: 1400px;
   background-color: $io-white;
+  z-index: 2;
 }
 
 .logo {
@@ -26,5 +27,9 @@
 
   &.active {
     color: $io-primary;
+  }
+
+  &:hover {
+    color: darken($io-primary, 15%);
   }
 }

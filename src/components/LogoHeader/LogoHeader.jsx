@@ -5,7 +5,7 @@ import cn from 'classnames';
 import styles from './LogoHeader.module.scss';
 
 const LogoHeader = () => (
-  <div className={cn(styles.container, 'container-fluid')}>
+  <header className={cn(styles.container, 'container-fluid')}>
     <div className="row align-items-center">
       <div className="col-auto mr-auto">
         <Link className={styles.logo} to="/">intro</Link>
@@ -18,7 +18,7 @@ const LogoHeader = () => (
         </nav>
       </div>
     </div>
-  </div>
+  </header>
 );
 
 export default LogoHeader;

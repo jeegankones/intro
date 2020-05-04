@@ -1,11 +1,12 @@
 import React from 'react';
+import cn from 'classnames';
 
 import style from './SearchBar.module.scss';
 
 const SearchBar = () => (
-  <div className={style.container}>
+  <section className={cn(style.SearchBar, 'pt-1')}>
     <input type="text" placeholder="Search places or categories" />
-  </div>
+  </section>
 );
 
 export default SearchBar;
