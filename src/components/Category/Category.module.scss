@@ -1,0 +1,36 @@
+@import "src/scss/variables";
+@import "src/scss/bootstrap/bootstrap-mixins";
+
+$--border-radius: 5px;
+
+.Category {
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+  height: 100px;
+  position: relative;
+  background-size: cover;
+  border-radius: $--border-radius;
+
+  @include media-breakpoint-up(sm) {
+    height: 140px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: $--border-radius;
+  }
+
+  .text {
+    font-weight: bold;
+    color: $io-white;
+    position: relative;
+    z-index: 1;
+  }
+}
