@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Category from '../Category/Category';
 
-const CategoryList = () => {
-  const [categories, setCategories] = useState([
+const Categories = () => {
+  const categories = [
     {
       category_id: 1,
       category_name: 'Home Repair',
@@ -33,12 +33,12 @@ const CategoryList = () => {
       category_name: 'Pets',
       image_url: 'https://i.ibb.co/W5hMgmj/pet.jpg'
     }
-  ]);
+  ];
 
   const categoryList = categories.map(
     (category) => (
       <Category
-        className="col-12 col-md-4"
+        className="col-12 col-md-6"
         key={category.category_id}
         name={category.category_name}
         imageUrl={category.image_url}
@@ -48,12 +48,14 @@ const CategoryList = () => {
 
   return (
     <section>
-      <h2 className="mb-4">Categories</h2>
-      <div className="row">
-        {categoryList}
+      <h2 className="mb-3">Categories</h2>
+      <div className="container-md">
+        <div className="row">
+          {categoryList}
+        </div>
       </div>
     </section>
   );
 };
 
-export default CategoryList;
+export default Categories;

@@ -28,6 +28,7 @@ module.exports = {
     'no-unused-vars': 1,
     'comma-dangle': ['error', {
       'functions': 'never'
-    }]
+    }],
+    'max-len': ['error', {'code': 140}]
   },
 };

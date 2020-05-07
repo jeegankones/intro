@@ -11,7 +11,7 @@ const Category = ({ name, imageUrl, className }) => (
       style={{ backgroundImage: `url(${imageUrl})` }}
       to="/"
     >
-      <h4 className={cn(style.text, 'mb-0')}>{name}</h4>
+      <div className={style.text}>{name}</div>
     </Link>
   </div>
 );
