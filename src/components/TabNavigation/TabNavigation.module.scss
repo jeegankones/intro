@@ -5,10 +5,8 @@
   left: 0;
   position: fixed;
   width: 100%;
-  padding: 10px;
-  display: flex;
+  height: 75px;
   background-color: $io-white;
-  justify-content: space-around;
   z-index: 2;
 }
 
@@ -33,6 +31,6 @@
   }
 
   .text {
-    font-size: 12px;
+    font-size: .8rem;
   }
 }

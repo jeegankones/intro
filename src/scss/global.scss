@@ -5,3 +5,13 @@ section {
 input {
   -webkit-appearance: none;
 }
+
+html {
+  font-size: 1rem;
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.125rem;
+  }
+}
