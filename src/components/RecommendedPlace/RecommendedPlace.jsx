@@ -10,15 +10,11 @@ const RecommendedPlace = ({
 }) => (
   <div className={cn(style.RecommendedPlace, className)}>
     <Link to="/">
-      <div className="row">
-        <div className="col-12">
-          <div className={style.image} style={{ backgroundImage: `url(${image})` }} />
-        </div>
-        <div className="col-auto mr-auto">
-          <div className={style.name}>{name}</div>
-        </div>
-        <div className="col-auto">
-          <div className={style.rating}>
+      <div className={style.card}>
+        <div className={style.image} style={{ backgroundImage: `url(${image})` }} />
+        <div className="row p-2">
+          <div className={cn(style.name, 'col-auto mr-auto')}>{name}</div>
+          <div className={cn(style.rating, 'col-auto')}>
             <Star />
             <span>{rating}</span>
           </div>

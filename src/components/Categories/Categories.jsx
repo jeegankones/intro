@@ -38,7 +38,7 @@ const Categories = () => {
   const categoryList = categories.map(
     (category) => (
       <Category
-        className="col-12 col-md-6"
+        className="col-12 col-md-6 mb-3 mb-md-5"
         key={category.category_id}
         name={category.category_name}
         imageUrl={category.image_url}
@@ -48,11 +48,9 @@ const Categories = () => {
 
   return (
     <section>
-      <h2 className="mb-3">Categories</h2>
-      <div className="container-md">
-        <div className="row">
-          {categoryList}
-        </div>
+      <h2 className="mb-4 font-weight-bold">Categories</h2>
+      <div className="row">
+        {categoryList}
       </div>
     </section>
   );

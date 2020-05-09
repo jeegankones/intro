@@ -4,7 +4,7 @@ import cn from 'classnames';
 import style from './SearchBar.module.scss';
 
 const SearchBar = () => (
-  <section className={cn(style.SearchBar, 'pt-1')}>
+  <section className={cn(style.SearchBar, 'pt-2 pt-md-4')}>
     <input type="text" placeholder="Search places or categories" />
   </section>
 );

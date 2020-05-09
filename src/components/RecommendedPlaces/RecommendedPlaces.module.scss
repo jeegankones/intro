@@ -3,11 +3,12 @@
 .RecommendedPlaces {
   .horizontalScroll {
     @include make-row();
-    overflow-x: auto;
-    flex-wrap: nowrap;
+    @include media-breakpoint-down(sm) {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+    }
 
     @include media-breakpoint-up(md) {
-      @include make-container();
       flex-wrap: wrap;
       overflow-x: initial;
     }
