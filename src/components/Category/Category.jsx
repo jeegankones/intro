@@ -3,12 +3,17 @@ import { Link } from 'react-router-dom';
 
 import style from './Category.module.scss';
 
-const Category = ({ name, imageUrl, className }) => (
+const Category = ({
+  id, name, imageUrl, className
+}) => (
   <div className={className}>
     <Link
       className={style.Category}
       style={{ backgroundImage: `url(${imageUrl})` }}
-      to="/"
+      to={{
+        pathname: '/category',
+        search: `?id=${id}`
+      }}
     >
       <div className={style.text}>{name}</div>
     </Link>

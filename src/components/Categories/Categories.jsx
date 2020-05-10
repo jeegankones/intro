@@ -40,6 +40,7 @@ const Categories = () => {
       <Category
         className="col-12 col-md-6 mb-3 mb-md-5"
         key={category.category_id}
+        id={category.category_id}
         name={category.category_name}
         imageUrl={category.image_url}
       />

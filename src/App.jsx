@@ -5,6 +5,7 @@ import MainLayout from './components/MainLayout/MainLayout';
 import Home from './pages/Home/Home';
 import Intros from './pages/Intros';
 import Profile from './pages/Profile';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/intros" component={Intros} />
         <Route path="/profile" component={Profile} />
+        <Route component={NotFound} />
       </Switch>
     </MainLayout>
   );
