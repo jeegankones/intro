@@ -8,7 +8,7 @@ const Footer = () => (
     <div className="container">
       <div className="row py-4">
         <div className="col">
-          &copy; Intro Corp. 2020
+          &copy; 2020 Intro, Inc. All rights reserved
         </div>
       </div>
 

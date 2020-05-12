@@ -46,6 +46,7 @@ const RecommendedPlaces = () => {
   const placesMapped = recommendedPlaces.map((place) => (
     <RecommendedPlace
       className="col-9 col-md-4 mb-md-5"
+      key={place.place_id}
       name={place.place_name}
       rating={place.place_rating}
       image={place.image_url}

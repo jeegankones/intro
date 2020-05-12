@@ -6,9 +6,11 @@ import Home from './pages/Home/Home';
 import Intros from './pages/Intros';
 import Profile from './pages/Profile';
 import NotFound from './pages/NotFound/NotFound';
+import GlobalLoader from './components/GlobalLoader/GlobalLoader';
 
-function App() {
-  return (
+const App = () => (
+  <>
+    <GlobalLoader />
     <MainLayout>
       <Switch>
         <Route exact path="/" component={Home} />
@@ -17,7 +19,7 @@ function App() {
         <Route component={NotFound} />
       </Switch>
     </MainLayout>
-  );
-}
+  </>
+);
 
 export default App;
