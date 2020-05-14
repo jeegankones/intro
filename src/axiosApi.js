@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'https://dev-intro.netlify.com/'
+  baseURL: 'https://dev-intro.netlify.app/'
 });
 
 export const withoutLoaderConfig = { withoutLoader: true };
