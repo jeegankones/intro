@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const baseUrl = 'https://intro-env-edge.eba-6z5r73tg.us-east-2.elasticbeanstalk.com/intro';
-
-const axiosInstance = axios.create();
+const axiosInstance = axios.create({
+  baseURL: 'https://dev-intro.netlify.com/'
+});
 
 export const withoutLoaderConfig = { withoutLoader: true };
 
