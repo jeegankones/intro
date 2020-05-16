@@ -26,6 +26,7 @@ module.exports = {
   rules: {
     'react/prop-types': 0,
     'react/jsx-one-expression-per-line': 0,
+    'react/jsx-props-no-spreading': 0,
     'react/no-unescaped-entities': 0,
     'object-curly-newline': 0,
     'no-unused-vars': 1,

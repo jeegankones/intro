@@ -1,11 +1,7 @@
 @import "src/scss/variables";
 @import "src/scss/bootstrap/bootstrap-mixins";
 
-.RecommendedPlace {
-  a:hover {
-    text-decoration: none;
-  }
-
+.PlaceCard {
   .card {
     border-radius: 10px;
     overflow: hidden;
@@ -13,17 +9,15 @@
   }
 
   .image {
-    width: 100%;
-    height: 140px;
     background-size: cover;
 
-    @include media-breakpoint-up(md) {
-      height: 200px;
-    }
-  }
+    &.vertical {
+      height: 140px;
 
-  .text {
-    display: inline;
+      @include media-breakpoint-up(md) {
+        height: 200px;
+      }
+    }
   }
 
   .name {
@@ -33,6 +27,10 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+  }
+
+  .reward {
+    font-size: 1.2rem;
   }
 
   .rating {
