@@ -2,26 +2,30 @@
 @import "src/scss/bootstrap/bootstrap-mixins";
 
 .PlaceCard {
+  a:hover {
+    text-decoration: none;
+  }
+
   .card {
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 10px $io-light-grey;
+    box-shadow: 0 2px 5px $io-light-grey;
   }
 
   .image {
     background-size: cover;
 
     &.vertical {
-      height: 140px;
+      height: 100px;
 
       @include media-breakpoint-up(md) {
-        height: 200px;
+        height: 160px;
       }
     }
   }
 
   .name {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     color: $io-dark-grey;
     overflow: hidden;
@@ -30,19 +34,23 @@
   }
 
   .reward {
-    font-size: 1.2rem;
+    font-size: .875rem;
+
+    .rewardAmount {
+      font-size: 1rem;
+    }
   }
 
   .rating {
     display: flex;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: .875rem;
     color: $io-dark-grey;
 
     svg {
       color: $io-primary;
       fill: $io-primary;
-      height: 1.2rem;
+      height: 1rem;
     }
   }
 }

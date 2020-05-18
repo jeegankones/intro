@@ -18,7 +18,7 @@ const RecommendedPlaces = () => {
   const placesMapped = places.map((place) => (
     <PlaceCard
       key={place.place_id}
-      className="col-9 col-md-4 mb-md-5"
+      className={cn(style.PlaceCard, 'col-7 py-2 col-md-3')}
       vertical
       place={place}
     />
@@ -27,7 +27,7 @@ const RecommendedPlaces = () => {
   return (
     <section className={style.RecommendedPlaces}>
       <h2>Places others love</h2>
-      <div className={cn(style.horizontalScroll, 'pb-3 pb-md-0')}>
+      <div className={cn(style.horizontalScroll)}>
         {placesMapped}
       </div>
     </section>

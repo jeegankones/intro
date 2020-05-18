@@ -3,10 +3,8 @@
 .RecommendedPlaces {
   .horizontalScroll {
     @include make-row();
-    @include media-breakpoint-down(sm) {
-      overflow-x: auto;
-      flex-wrap: nowrap;
-    }
+    flex-wrap: nowrap;
+    overflow-x: auto;
 
     @include media-breakpoint-up(md) {
       flex-wrap: wrap;
@@ -14,6 +12,12 @@
     }
 
     &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .PlaceCard:nth-child(n+5) {
       display: none;
     }
   }

@@ -17,7 +17,7 @@ const App = () => (
         <Route exact path="/" render={() => (<Home />)} />
         <Route path="/intros" component={Intros} />
         <Route path="/profile" component={Profile} />
-        <Route path="/category" render={(props) => (<Category {...props} />)} />
+        <Route path="/category/:id" render={(props) => (<Category {...props} />)} />
         <Route component={NotFound} />
       </Switch>
     </MainLayout>

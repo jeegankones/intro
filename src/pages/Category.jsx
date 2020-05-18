@@ -2,16 +2,18 @@ import React, { useEffect, useState } from 'react';
 import axiosInstance from '../axiosApi';
 import PlaceCard from '../components/PlaceCard/PlaceCard';
 
-const Category = ({ location }) => {
-  const { category } = location.state;
+const Category = ({ match }) => {
+  const { id } = match.params;
   const [places, setPlaces] = useState([]);
+  const [categoryName, setCategoryName] = useState('');
 
   useEffect(() => {
-    axiosInstance.get(`/places/category/${category.category_id}`)
+    axiosInstance.get(`/places/category/${id}`)
       .then((response) => {
-        setPlaces(response.data);
+        setPlaces(response.data.places);
+        setCategoryName(response.data.category_name);
       });
-  }, [category]);
+  }, []);
 
   const placesMap = places.map((place) => (
     <PlaceCard
@@ -23,7 +25,7 @@ const Category = ({ location }) => {
 
   return (
     <>
-      <h2>{category.category_name}</h2>
+      <h2>{categoryName}</h2>
       <div className="row">
         { placesMap }
       </div>

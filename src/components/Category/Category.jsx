@@ -5,17 +5,13 @@ import style from './Category.module.scss';
 
 const Category = (props) => {
   const { category, className } = props;
-  const url = category.category_name.replace(/\s+/g, '-').toLowerCase();
 
   return (
     <div className={className}>
       <Link
         className={style.Category}
         style={{ backgroundImage: `url(${category.image_url})` }}
-        to={{
-          pathname: `/category/${url}`,
-          state: { category }
-        }}
+        to={`/category/${category.category_id}`}
       >
         <div className={style.text}>{category.category_name}</div>
       </Link>
