@@ -7,7 +7,7 @@ import style from './PlaceCard.module.scss';
 
 const PlaceCard = ({ place, className, vertical = false }) => (
   <div className={cn(style.PlaceCard, className)}>
-    <Link to="/">
+    <Link to={`/place/${place.place_id}`}>
       <div className={style.card}>
         <div className="row no-gutters">
           <div

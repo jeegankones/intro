@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Intros = () => (
-  <div>
+  <div className="container">
     Intros page works!
   </div>
 );

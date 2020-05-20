@@ -24,12 +24,12 @@ const Category = ({ match }) => {
   ));
 
   return (
-    <>
+    <div className="container">
       <h2>{categoryName}</h2>
       <div className="row">
         { placesMap }
       </div>
-    </>
+    </div>
   );
 };
 

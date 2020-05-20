@@ -8,6 +8,7 @@ import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 import GlobalLoader from './components/GlobalLoader/GlobalLoader';
 import Category from './pages/Category';
+import Place from './pages/Place';
 
 const App = () => (
   <>
@@ -18,6 +19,7 @@ const App = () => (
         <Route path="/intros" component={Intros} />
         <Route path="/profile" component={Profile} />
         <Route path="/category/:id" render={(props) => (<Category {...props} />)} />
+        <Route path="/place/:id" render={(props) => (<Place {...props} />)} />
         <Route component={NotFound} />
       </Switch>
     </MainLayout>

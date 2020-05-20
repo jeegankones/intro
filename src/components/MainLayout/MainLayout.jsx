@@ -8,7 +8,7 @@ import Footer from '../Footer/Footer';
 const MainLayout = ({ children }) => (
   <div className={style.container}>
     <LogoHeader />
-    <main className="container">{children}</main>
+    <main>{children}</main>
     <Footer />
     <TabNavigation />
   </div>

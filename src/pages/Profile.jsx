@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Profile = () => (
-  <div>
+  <div className="container">
     Profile page works!
   </div>
 );
