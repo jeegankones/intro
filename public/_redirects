@@ -1,1 +1,1 @@
-/api/* http://intro-env-edge.eba-6z5r73tg.us-east-2.elasticbeanstalk.com/intro/:splat 200!
+/api/* http://introedge-env.eba-kphxhpgs.us-east-2.elasticbeanstalk.com/intro/:splat 200!
