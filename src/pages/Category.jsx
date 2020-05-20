@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { isEmpty } from 'lodash';
 import axiosInstance from '../axiosApi';
 import PlaceCard from '../components/PlaceCard/PlaceCard';
 
@@ -18,7 +19,7 @@ const Category = ({ match }) => {
   const placesMap = places.map((place) => (
     <PlaceCard
       key={place.place_id}
-      className="mb-4 col-md-6"
+      className="mb-4 col-12 col-md-6"
       place={place}
     />
   ));
@@ -27,7 +28,7 @@ const Category = ({ match }) => {
     <div className="container">
       <h2>{categoryName}</h2>
       <div className="row">
-        { placesMap }
+        { isEmpty(places) ? <div className="col-12">No places here yet</div> : placesMap }
       </div>
     </div>
   );

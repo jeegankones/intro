@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import MainLayout from './components/MainLayout/MainLayout';
 import Home from './pages/Home';
@@ -8,7 +7,7 @@ import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 import GlobalLoader from './components/GlobalLoader/GlobalLoader';
 import Category from './pages/Category';
-import Place from './pages/Place';
+import Place from './pages/Place/Place';
 
 const App = () => (
   <>

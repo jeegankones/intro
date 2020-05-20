@@ -14,7 +14,7 @@ const PlaceCard = ({ place, className, vertical = false }) => (
             className={cn(style.image, vertical ? [style.vertical, 'col-12 -vertical'] : 'col-4')}
             style={{ backgroundImage: `url(${place.image_url})` }}
           />
-          <div className={cn('p-2 p-md-3', vertical ? 'col-12' : 'col-8')}>
+          <div className={cn('p-3 p-md-3', vertical ? 'col-12' : 'col-8')}>
             <div className="row no-gutters">
               <div className={cn(style.name, 'col')}>{place.place_name}</div>
             </div>

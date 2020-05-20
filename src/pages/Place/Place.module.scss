@@ -1,0 +1,16 @@
+@import "src/scss/bootstrap/bootstrap-mixins";
+
+.imageContainer {
+  display: flex;
+  height: 200px;
+  overflow: hidden;
+
+  @include media-breakpoint-up(md) {
+    height: 450px;
+  }
+
+  img {
+    align-self: center;
+    width: 100%;
+  }
+}
