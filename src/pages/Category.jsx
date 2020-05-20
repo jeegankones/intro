@@ -13,7 +13,7 @@ const Category = ({ match }) => {
         setPlaces(response.data.places);
         setCategoryName(response.data.category_name);
       });
-  }, []);
+  }, [id]);
 
   const placesMap = places.map((place) => (
     <PlaceCard
