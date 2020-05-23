@@ -1,1 +1,2 @@
 /api/* http://introedge-env.eba-kphxhpgs.us-east-2.elasticbeanstalk.com/intro/:splat 200!
+/* /index.html 200
