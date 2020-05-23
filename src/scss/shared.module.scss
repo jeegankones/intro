@@ -1,0 +1,23 @@
+@import "variables";
+@import "bootstrap/bootstrap-mixins";
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px $io-grey;
+}
+
+.horizontalScrollContainer {
+  @include make-row();
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  @include media-breakpoint-up(md) {
+    flex-wrap: wrap;
+    overflow-x: initial;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

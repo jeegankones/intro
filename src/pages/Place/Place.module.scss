@@ -1,4 +1,16 @@
 @import "src/scss/bootstrap/bootstrap-mixins";
+@import "src/scss/variables";
+
+.place {
+  hr {
+    margin-top: 0;
+    margin-bottom: 2rem;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 4rem;
+    }
+  }
+}
 
 .imageContainer {
   display: flex;
@@ -12,5 +24,25 @@
   img {
     align-self: center;
     width: 100%;
+  }
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+
+  svg {
+    color: $io-primary;
+    fill: $io-primary;
+    height: 1rem;
+  }
+}
+
+.locationCard {
+  composes: card from '../../scss/shared.module.scss';
+
+  p {
+    margin-bottom: 0;
   }
 }

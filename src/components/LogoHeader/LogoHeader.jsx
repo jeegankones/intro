@@ -6,7 +6,7 @@ import styles from './LogoHeader.module.scss';
 
 const LogoHeader = () => (
   <header className={cn(styles.container, 'container-fluid')}>
-    <div className="row align-items-center">
+    <div className={cn(styles.content, 'row align-items-center')}>
       <div className="col-auto mr-auto">
         <Link className={styles.logo} to="/">intro</Link>
       </div>

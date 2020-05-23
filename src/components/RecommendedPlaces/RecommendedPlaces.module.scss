@@ -1,21 +1,6 @@
 @import "src/scss/bootstrap/bootstrap-mixins";
 
 .RecommendedPlaces {
-  .horizontalScroll {
-    @include make-row();
-    flex-wrap: nowrap;
-    overflow-x: auto;
-
-    @include media-breakpoint-up(md) {
-      flex-wrap: wrap;
-      overflow-x: initial;
-    }
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-
   @include media-breakpoint-up(md) {
     .PlaceCard:nth-child(n+5) {
       display: none;

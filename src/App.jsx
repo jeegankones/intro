@@ -1,6 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import MainLayout from './components/MainLayout/MainLayout';
+import { Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Intros from './pages/Intros';
 import Profile from './pages/Profile';
@@ -8,20 +7,19 @@ import NotFound from './pages/NotFound';
 import GlobalLoader from './components/GlobalLoader/GlobalLoader';
 import Category from './pages/Category';
 import Place from './pages/Place/Place';
+import MainLayoutRoute from './layouts/MainLayout/MainLayoutRoute';
 
 const App = () => (
   <>
     <GlobalLoader />
-    <MainLayout>
-      <Switch>
-        <Route exact path="/" render={() => (<Home />)} />
-        <Route path="/intros" component={Intros} />
-        <Route path="/profile" component={Profile} />
-        <Route path="/category/:id" render={(props) => (<Category {...props} />)} />
-        <Route path="/place/:id" render={(props) => (<Place {...props} />)} />
-        <Route component={NotFound} />
-      </Switch>
-    </MainLayout>
+    <Switch>
+      <MainLayoutRoute exact path="/" component={Home} />
+      <MainLayoutRoute path="/intros" component={Intros} />
+      <MainLayoutRoute path="/profile" component={Profile} />
+      <MainLayoutRoute path="/category/:id" component={Category} />
+      <MainLayoutRoute path="/place/:id" component={Place} />
+      <MainLayoutRoute component={NotFound} />
+    </Switch>
   </>
 );
 

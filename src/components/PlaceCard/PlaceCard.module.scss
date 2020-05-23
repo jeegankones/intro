@@ -25,7 +25,7 @@
   }
 
   .name {
-    font-size: 1.125rem;
+    font-size: $io-font-large;
     font-weight: bold;
     color: $io-dark-grey;
     overflow: hidden;
@@ -33,18 +33,13 @@
     text-overflow: ellipsis;
   }
 
-  .reward {
-    font-size: 1rem;
-
-    .rewardAmount {
-      font-size: 1.125rem;
-    }
+  .rewardAmount {
+    font-size: $io-font-large;
   }
 
   .rating {
     display: flex;
     align-items: center;
-    font-size: 1rem;
     color: $io-dark-grey;
 
     svg {

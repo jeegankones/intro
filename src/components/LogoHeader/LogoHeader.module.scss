@@ -2,16 +2,20 @@
 @import "src/scss/bootstrap/bootstrap-mixins";
 
 .container {
-  padding: 15px;
+  padding: .875rem;
   top: 0;
   width: 100%;
-  max-width: 1400px;
   background-color: $io-white;
   z-index: 2;
 
   @include media-breakpoint-up(md) {
     position: sticky;
   }
+}
+
+.content {
+  margin: auto;
+  max-width: 1400px;
 }
 
 .logo {

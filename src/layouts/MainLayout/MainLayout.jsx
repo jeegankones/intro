@@ -1,9 +1,9 @@
 import React from 'react';
-import TabNavigation from '../TabNavigation/TabNavigation';
-import LogoHeader from '../LogoHeader/LogoHeader';
+import TabNavigation from '../../components/TabNavigation/TabNavigation';
+import LogoHeader from '../../components/LogoHeader/LogoHeader';
 
 import style from './MainLayout.module.scss';
-import Footer from '../Footer/Footer';
+import Footer from '../../components/Footer/Footer';
 
 const MainLayout = ({ children }) => (
   <div className={style.container}>

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import cn from 'classnames';
-
-import style from './RecommendedPlaces.module.scss';
 import axiosInstance from '../../axiosApi';
 import PlaceCard from '../PlaceCard/PlaceCard';
+
+import sharedStyle from '../../scss/shared.module.scss';
+import style from './RecommendedPlaces.module.scss';
 
 const RecommendedPlaces = () => {
   const [places, setPlaces] = useState([]);
@@ -27,7 +28,7 @@ const RecommendedPlaces = () => {
   return (
     <section className={style.RecommendedPlaces}>
       <h2>Places others love</h2>
-      <div className={cn(style.horizontalScroll)}>
+      <div className={sharedStyle.horizontalScrollContainer}>
         {placesMapped}
       </div>
     </section>

@@ -1,12 +1,8 @@
 section {
   padding-bottom: 2rem;
 
-  &:last-of-type {
-    padding-bottom: 0;
-  }
-
   @include media-breakpoint-up(md) {
-    padding-bottom: 5rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -24,7 +20,7 @@ html {
   }
 }
 
-h1, h2 {
-  margin-bottom: 1.5rem;
+h1, h2, h3, h4 {
   font-weight: bold;
 }
+
