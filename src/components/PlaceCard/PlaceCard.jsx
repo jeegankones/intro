@@ -21,7 +21,7 @@ const PlaceCard = ({ place, className, vertical = false }) => (
             </div>
             <div className="pt-2 row no-gutters d-flex align-items-center">
               <div className="col mr-auto font-weight-bold">
-                <span className={style.rewardAmount}>${place.reward_amount}</span> cash back
+                <span className={style.rewardAmount}>${place.reward_amount}</span> per intro
               </div>
               <div className={cn(style.rating, 'col-auto')}>
                 <Star />

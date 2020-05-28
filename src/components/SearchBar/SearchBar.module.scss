@@ -12,7 +12,7 @@
     padding: 0 1.5rem;
     background-color: $io-white;
     border: none;
-    box-shadow: 0 2px 8px $io-grey;
+    box-shadow: 0 2px 8px rgba($io-grey, 0.5);
     border-radius: 1.3rem;
 
     &:focus {

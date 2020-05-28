@@ -4,7 +4,7 @@
 .card {
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 6px $io-grey;
+  box-shadow: 0 2px 6px rgba($io-grey, 0.5);
 }
 
 .horizontalScrollContainer {
