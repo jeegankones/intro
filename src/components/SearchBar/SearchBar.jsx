@@ -4,9 +4,9 @@ import cn from 'classnames';
 import style from './SearchBar.module.scss';
 
 const SearchBar = () => (
-  <section className={cn(style.SearchBar, 'pt-2 pt-md-5 mb-md-4 mx-auto')}>
+  <div className={cn(style.SearchBar, 'mx-auto')}>
     <input type="text" placeholder="Search places or categories" />
-  </section>
+  </div>
 );
 
 export default SearchBar;

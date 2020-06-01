@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch } from 'react-router-dom';
-import Home from './pages/Home';
+import Explore from './pages/Explore';
 import Intros from './pages/Intros';
 import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
@@ -13,7 +13,7 @@ const App = () => (
   <>
     <GlobalLoader />
     <Switch>
-      <MainLayoutRoute exact path="/" component={Home} />
+      <MainLayoutRoute exact path="/" component={Explore} />
       <MainLayoutRoute path="/intros" component={Intros} />
       <MainLayoutRoute path="/profile" component={Profile} />
       <MainLayoutRoute path="/category/:id" component={Category} />

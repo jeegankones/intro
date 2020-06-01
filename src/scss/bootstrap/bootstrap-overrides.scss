@@ -1,6 +1,7 @@
 @import "src/scss/variables";
 
 $primary: $io-primary;
+$white: $io-white;
 
 $font-family-base: 'Nunito Sans';
 
@@ -9,7 +10,7 @@ $headings-color: $io-darker-grey;
 $text-muted: lighten($body-color, 20%);
 
 $font-size-base: 1rem;
-$h1-font-size: $font-size-base * 2;
+$h1-font-size: $font-size-base * 2.25;
 $h2-font-size: $font-size-base * 1.75;
 $h3-font-size: $font-size-base * 1.5;
 $h4-font-size: $font-size-base * 1.25;
