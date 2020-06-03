@@ -19,7 +19,7 @@ const RecommendedPlaces = () => {
   const placesMapped = places.map((place) => (
     <PlaceCard
       key={place.place_id}
-      className={cn(style.PlaceCard, 'col-7 py-2 col-md-3')}
+      className={style.PlaceCard}
       vertical
       place={place}
     />

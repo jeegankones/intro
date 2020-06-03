@@ -25,7 +25,7 @@ const Category = ({ match }) => {
   ));
 
   return (
-    <div className="container">
+    <div className="container-lg">
       <h2>{categoryName}</h2>
       <div className="row">
         { isEmpty(places) ? <div className="col-12">No places here yet</div> : placesMap }

@@ -1,9 +1,36 @@
 @import "src/scss/bootstrap/bootstrap-mixins";
 
 .RecommendedPlaces {
-  @include media-breakpoint-up(md) {
-    .PlaceCard:nth-child(n+5) {
-      display: none;
+  .PlaceCard {
+    flex: 0 0 52%;
+    max-width: 52%;
+    padding-right: 20px;
+
+    &:first-child {
+      margin-left: 15px;
+    }
+
+    &:last-child {
+      padding-right: 15px;
+    }
+
+    @include media-breakpoint-up(md) {
+      @include make-col(5);
+      padding-left: 15px;
+      padding-right: 15px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(3);
+
+      &:nth-child(n+5) {
+        display: none;
+      }
     }
   }
+
 }

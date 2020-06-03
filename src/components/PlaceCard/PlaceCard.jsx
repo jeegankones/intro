@@ -16,7 +16,7 @@ const PlaceCard = ({ place, className, vertical = false }) => (
           />
         </div>
         <div className={vertical ? 'col-12' : 'col-7'}>
-          <div className={cn('row align-items-center', vertical ? 'pt-2' : 'pl-2')}>
+          <div className={cn('row no-gutters align-items-center', vertical ? 'pt-2' : 'pl-2')}>
             <div className={cn('col-12', vertical ? 'pb-0' : 'pb-2')}>
               <div className={style.name}>{place.place_name}</div>
             </div>

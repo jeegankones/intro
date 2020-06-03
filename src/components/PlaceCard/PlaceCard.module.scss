@@ -8,13 +8,14 @@
 
   .image {
     background-size: cover;
+    background-position: center;
     border-radius: 5px;
     overflow: hidden;
 
     height: 100px;
 
     @include media-breakpoint-up(md) {
-      height: 160px;
+      height: 130px;
     }
   }
 

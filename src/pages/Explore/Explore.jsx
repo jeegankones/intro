@@ -15,7 +15,7 @@ const Explore = () => (
         <SearchBar />
       </div>
     </section>
-    <div className="container">
+    <div className="container-lg">
       <RecommendedPlaces />
       <Categories />
     </div>
