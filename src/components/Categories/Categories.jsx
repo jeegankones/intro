@@ -15,7 +15,7 @@ const Categories = () => {
   const categoryList = categories
     .map((category) => (
       <Category
-        className="col-12 col-md-6 mb-3 mb-md-5"
+        className="col-12 col-md-6 mb-3"
         key={category.category_id}
         category={category}
       />

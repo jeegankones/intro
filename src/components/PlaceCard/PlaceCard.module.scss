@@ -8,13 +8,13 @@
 
   .image {
     background-size: cover;
+    border-radius: 5px;
+    overflow: hidden;
 
-    &.vertical {
-      height: 100px;
+    height: 100px;
 
-      @include media-breakpoint-up(md) {
-        height: 160px;
-      }
+    @include media-breakpoint-up(md) {
+      height: 160px;
     }
   }
 
@@ -32,8 +32,6 @@
   }
 
   .rating {
-    display: flex;
-    align-items: center;
     color: $io-dark-grey;
 
     svg {

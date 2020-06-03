@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch } from 'react-router-dom';
-import Explore from './pages/Explore';
+import Explore from './pages/Explore/Explore';
 import Intros from './pages/Intros';
 import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';

@@ -3,27 +3,30 @@ import cn from 'classnames';
 import { Link } from 'react-router-dom';
 import { Star } from 'react-feather';
 
-import sharedStyle from '../../scss/shared.module.scss';
 import style from './PlaceCard.module.scss';
 
 const PlaceCard = ({ place, className, vertical = false }) => (
   <div className={cn(style.PlaceCard, className)}>
     <Link to={`/place/${place.place_id}`}>
-      <div className={sharedStyle.card}>
-        <div className="row no-gutters">
+      <div className="row no-gutters">
+        <div className={vertical ? 'col-12' : 'col-5'}>
           <div
-            className={cn(style.image, vertical ? [style.vertical, 'col-12 -vertical'] : 'col-4')}
+            className={style.image}
             style={{ backgroundImage: `url(${place.image_url})` }}
           />
-          <div className={cn('p-3 p-md-3', vertical ? 'col-12' : 'col-8')}>
-            <div className="row no-gutters">
-              <div className={cn(style.name, 'col')}>{place.place_name}</div>
+        </div>
+        <div className={vertical ? 'col-12' : 'col-7'}>
+          <div className={cn('row align-items-center', vertical ? 'pt-2' : 'pl-2')}>
+            <div className={cn('col-12', vertical ? 'pb-0' : 'pb-2')}>
+              <div className={style.name}>{place.place_name}</div>
             </div>
-            <div className="pt-2 row no-gutters d-flex align-items-center">
-              <div className="col mr-auto font-weight-bold">
-                <span className={style.rewardAmount}>${place.reward_amount}</span> per intro
-              </div>
-              <div className={cn(style.rating, 'col-auto')}>
+            <div className="col mr-auto">
+              <span className={cn(style.rewardAmount, 'font-weight-bold')}>
+                ${place.reward_amount}
+              </span> per intro
+            </div>
+            <div className="col-auto d-flex align-items-center">
+              <div className={style.rating}>
                 <Star />
                 <span>{place.rating}</span>
               </div>

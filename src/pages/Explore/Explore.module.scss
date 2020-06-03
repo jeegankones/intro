@@ -1,0 +1,15 @@
+@import "../../scss/variables";
+@import "../../scss/bootstrap/bootstrap-mixins";
+
+.hero {
+  background-color: $io-white;
+  padding: 1.25rem 0;
+
+  @include media-breakpoint-up(md) {
+    padding: 3rem 0;
+  }
+
+  .container {
+    max-width: 800px;
+  }
+}
