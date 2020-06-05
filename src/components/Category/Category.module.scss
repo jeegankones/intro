@@ -1,19 +1,20 @@
 @import "src/scss/variables";
 @import "src/scss/bootstrap/bootstrap-mixins";
 
-$--border-radius: 10px;
+$--border-radius: 5px;
 
 .Category {
   display: flex;
   align-items: flex-end;
   padding: 15px;
-  height: 100px;
+  height: 80px;
   position: relative;
   background-size: cover;
+  background-position: center;
   border-radius: $--border-radius;
 
   @include media-breakpoint-up(md) {
-    height: 160px;
+    height: 100px;
   }
 
   &:after {

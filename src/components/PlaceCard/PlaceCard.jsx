@@ -16,7 +16,7 @@ const PlaceCard = ({ place, className, vertical = false }) => (
           />
         </div>
         <div className={vertical ? 'col-12' : 'col-7'}>
-          <div className={cn('row no-gutters align-items-center', vertical ? 'pt-2' : 'pl-2')}>
+          <div className={cn('row no-gutters align-items-center', vertical ? 'pt-1' : 'pl-2')}>
             <div className={cn('col-12', vertical ? 'pb-0' : 'pb-2')}>
               <div className={style.name}>{place.place_name}</div>
             </div>
@@ -25,10 +25,10 @@ const PlaceCard = ({ place, className, vertical = false }) => (
                 ${place.reward_amount}
               </span> per intro
             </div>
-            <div className="col-auto d-flex align-items-center">
-              <div className={style.rating}>
+            <div className="col-auto">
+              <div className={cn(style.rating, 'd-flex align-items-center')}>
                 <Star />
-                <span>{place.rating}</span>
+                <span className="text-secondary">{place.rating}</span>
               </div>
             </div>
           </div>

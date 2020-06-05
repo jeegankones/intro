@@ -1,17 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import axiosInstance from '../../axiosApi';
+import React from 'react';
 import Category from '../Category/Category';
 
-const Categories = () => {
-  const [categories, setCategories] = useState([]);
-
-  useEffect(() => {
-    axiosInstance.get('/explore/categories')
-      .then((response) => {
-        setCategories(response.data);
-      });
-  }, []);
-
+const CategoryList = ({ categories }) => {
   const categoryList = categories
     .map((category) => (
       <Category
@@ -31,4 +21,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default CategoryList;
