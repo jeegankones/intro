@@ -4,6 +4,11 @@
 .PlaceCard {
   a:hover {
     text-decoration: none;
+
+    .name {
+      text-decoration: underline;
+      text-decoration-color: $io-primary;
+    }
   }
 
   .image {
@@ -31,11 +36,9 @@
     font-size: $io-font-large;
   }
 
-  .rating {
-    svg {
-      color: $io-primary;
-      fill: $io-primary;
-      height: 1rem;
-    }
+  .rating svg {
+    color: $io-primary;
+    fill: $io-primary;
+    height: 1rem;
   }
 }

@@ -1,8 +1,16 @@
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+
+  hr {
+    margin-top: 1.5rem;
+  }
 
   @include media-breakpoint-up(md) {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+
+    hr {
+      margin-top: 2rem;
+    }
   }
 }
 
@@ -16,7 +24,7 @@ html {
 
 @include media-breakpoint-up(md) {
   html {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 }
 

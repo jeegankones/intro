@@ -42,6 +42,7 @@ const CategoryPlaces = ({ category }) => {
       <div className={sharedStyle.horizontalScrollContainer}>
         {placesMapped}
       </div>
+      <hr />
     </section>
   );
 };

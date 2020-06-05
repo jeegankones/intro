@@ -25,7 +25,7 @@ const Explore = () => {
 
   return (
     <>
-      <section className={cn(style.hero)}>
+      <section className={style.hero}>
         <div className={cn(style.container, 'container')}>
           <h1 className="text-primary mb-4">Discover local businesses.<br />Get cash back.</h1>
           <SearchBar />

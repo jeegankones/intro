@@ -31,6 +31,7 @@ const RecommendedPlaces = () => {
       <div className={sharedStyle.horizontalScrollContainer}>
         {placesMapped}
       </div>
+      <hr />
     </section>
   );
 };
