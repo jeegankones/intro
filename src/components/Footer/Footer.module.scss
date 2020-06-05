@@ -3,4 +3,10 @@
 .Footer {
   background-color: $io-lighter-grey;
   font-size: $io-font-small;
+
+  .linkSection {
+    a {
+      color: $io-grey;
+    }
+  }
 }

@@ -8,7 +8,7 @@ $font-family-base: 'Nunito Sans';
 
 $body-color: $io-dark-grey;
 $headings-color: $io-darker-grey;
-$text-muted: lighten($body-color, 20%);
+$text-muted: $io-grey;
 
 $font-size-base: 1rem;
 $h1-font-size: $font-size-base * 2;
