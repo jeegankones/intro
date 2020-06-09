@@ -27,15 +27,15 @@ const Explore = () => {
     <>
       <section className={style.hero}>
         <div className={cn(style.container, 'container')}>
-          <h1 className="text-primary mb-4">Discover local businesses.<br />Get cash back.</h1>
+          <h1 className="text-primary">Discover local businesses.<br />Get cash back.</h1>
           <SearchBar />
         </div>
       </section>
-      <div className="container-lg">
-        <RecommendedPlaces />
+      <RecommendedPlaces />
+      <div className="container-lg mb-2">
         {categoryPlacesSections}
-        <CategoryList categories={categories} />
       </div>
+      <CategoryList categories={categories} />
     </>
   );
 };

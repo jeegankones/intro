@@ -19,20 +19,22 @@ const RecommendedPlaces = () => {
   const placesMapped = places.map((place) => (
     <PlaceCard
       key={place.place_id}
-      className={cn(style.placeCard, 'col-7 col-sm-5 col-lg-3')}
+      className={cn(style.placeCard, 'col-10 col-sm-5 col-lg-3')}
+      tall
       vertical
       place={place}
     />
   ));
 
   return (
-    <section>
-      <h2>Places others love</h2>
-      <div className={sharedStyle.horizontalScrollContainer}>
-        {placesMapped}
-      </div>
-      <hr />
-    </section>
+    <div className="container-lg">
+      <section>
+        <h2>Places others love</h2>
+        <div className={sharedStyle.horizontalScrollContainer}>
+          {placesMapped}
+        </div>
+      </section>
+    </div>
   );
 };
 

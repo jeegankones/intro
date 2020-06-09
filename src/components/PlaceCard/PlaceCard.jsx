@@ -5,8 +5,8 @@ import { Star } from 'react-feather';
 
 import style from './PlaceCard.module.scss';
 
-const PlaceCard = ({ place, className, vertical = false }) => (
-  <div className={cn(style.PlaceCard, className)}>
+const PlaceCard = ({ place, className, vertical = false, tall = false }) => (
+  <div className={cn(style.PlaceCard, tall && style.tall, className)}>
     <Link to={`/place/${place.place_id}`}>
       <div className="row no-gutters">
         <div className={vertical ? 'col-12' : 'col-5'}>
@@ -23,7 +23,7 @@ const PlaceCard = ({ place, className, vertical = false }) => (
             <div className="col mr-auto">
               <span className={cn(style.rewardAmount, 'font-weight-bold')}>
                 ${place.reward_amount}
-              </span> per intro
+              </span> cash back
             </div>
             <div className="col-auto">
               <div className={cn(style.rating, 'd-flex align-items-center')}>

@@ -11,6 +11,12 @@
     }
   }
 
+  &.tall {
+    .image {
+      height: 180px;
+    }
+  }
+
   .image {
     background-size: cover;
     background-position: center;

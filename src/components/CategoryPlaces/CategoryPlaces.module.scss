@@ -1,5 +1,13 @@
 @import "src/scss/bootstrap/bootstrap-mixins";
 
+.CategoryPlaces {
+  border-bottom: 1px solid $border-color;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
 .placeCard {
   @include media-breakpoint-up(lg) {
     &:nth-child(n+5) {

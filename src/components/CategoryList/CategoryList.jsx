@@ -12,12 +12,14 @@ const CategoryList = ({ categories }) => {
     ));
 
   return (
-    <section>
-      <h2>Categories</h2>
-      <div className="row">
-        {categoryList}
-      </div>
-    </section>
+    <div className="container-lg">
+      <section>
+        <h2>Categories</h2>
+        <div className="row">
+          {categoryList}
+        </div>
+      </section>
+    </div>
   );
 };
 
