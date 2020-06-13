@@ -2,8 +2,14 @@
 
 .CategoryPlaces {
   border-bottom: 1px solid $border-color;
+  padding: 1.5rem 0;
 
-  &:last-of-type {
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
     border-bottom: none;
   }
 }

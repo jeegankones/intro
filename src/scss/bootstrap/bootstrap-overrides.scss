@@ -1,7 +1,11 @@
 @import "src/scss/variables";
 
-$primary: $io-primary;
-$secondary: $io-dark-grey;
+$theme-colors: (
+  "primary": $io-primary,
+  "secondary": $io-dark-grey,
+  "white": $io-white
+);
+
 $white: $io-white;
 
 $font-family-base: 'Nunito Sans';
@@ -17,3 +21,5 @@ $h3-font-size: $font-size-base * 1.25;
 $h4-font-size: $font-size-base * 1;
 $h5-font-size: $font-size-base * .875;
 $h6-font-size: $font-size-base * .85;
+
+$btn-border-width: 2px;

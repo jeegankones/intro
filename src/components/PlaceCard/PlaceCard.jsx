@@ -20,8 +20,8 @@ const PlaceCard = ({ place, className, vertical = false, tall = false }) => (
             <div className={cn('col-12', vertical ? 'pb-0' : 'pb-2')}>
               <div className={style.name}>{place.place_name}</div>
             </div>
-            <div className="col mr-auto">
-              <span className={cn(style.rewardAmount, 'font-weight-bold')}>
+            <div className="col mr-auto font-weight-bold">
+              <span className={style.rewardAmount}>
                 ${place.reward_amount}
               </span> cash back
             </div>

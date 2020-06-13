@@ -28,7 +28,7 @@ const CategoryPlaces = ({ category }) => {
   ));
 
   return places.length === 0 ? null : (
-    <section className={cn(style.CategoryPlaces, 'mb-0 py-4')}>
+    <article className={cn(style.CategoryPlaces)}>
       <div className="row align-items-center">
         <div className="col mr-auto">
           <h3>{category.category_name}</h3>
@@ -42,7 +42,7 @@ const CategoryPlaces = ({ category }) => {
       <div className={sharedStyle.horizontalScrollContainer}>
         {placesMapped}
       </div>
-    </section>
+    </article>
   );
 };
 
