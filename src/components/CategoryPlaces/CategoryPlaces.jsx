@@ -16,6 +16,7 @@ const CategoryPlaces = ({ category }) => {
       .then((response) => {
         setPlaces(response.data.places);
       });
+    // eslint-disable-next-line
   }, []);
 
   const placesMapped = places.map((place) => (
