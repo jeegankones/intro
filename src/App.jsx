@@ -6,14 +6,18 @@ import NotFound from './pages/NotFound';
 import GlobalLoader from './components/GlobalLoader/GlobalLoader';
 import Category from './pages/Category';
 import Place from './pages/Place/Place';
-import MainLayoutRoute from './layouts/MainLayout/MainLayoutRoute';
+import MainLayoutRoute from './components/MainLayoutRoute';
+import SecuredRoute from './components/SecuredRoute';
+import MainLayout from './layouts/MainLayout/MainLayout';
+import ScrollToTop from './utils/ScrollToTop';
 
 const App = () => (
   <>
     <GlobalLoader />
+    <ScrollToTop />
     <Switch>
       <MainLayoutRoute exact path="/" component={Explore} />
-      <MainLayoutRoute path="/profile" component={Profile} />
+      <SecuredRoute path="/profile" component={Profile} layout={MainLayout} />
       <MainLayoutRoute path="/category/:id" component={Category} />
       <MainLayoutRoute path="/place/:id" component={Place} />
       <MainLayoutRoute component={NotFound} />

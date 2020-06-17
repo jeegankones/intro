@@ -28,8 +28,9 @@ module.exports = {
     'react/jsx-one-expression-per-line': 0,
     'react/jsx-props-no-spreading': 0,
     'react/no-unescaped-entities': 0,
+    'reeact-hooks/exhaustive-deps': 0,
     'object-curly-newline': 0,
-    'no-unused-vars': 1,
+    'no-unused-vars': 0,
     'comma-dangle': ['error', {
       'functions': 'never'
     }],
