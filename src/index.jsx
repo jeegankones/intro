@@ -4,7 +4,6 @@ import './scss/index.scss';
 import { Router } from 'react-router-dom';
 import App from './App';
 import { Auth0Provider } from './react-auth0-spa';
-import config from './auth_config.json';
 import history from './utils/history';
 
 // Routes the user to the right place after login
@@ -20,8 +19,8 @@ ReactDOM.render(
   <React.StrictMode>
     <Router history={history}>
       <Auth0Provider
-        domain={config.domain}
-        client_id={config.clientId}
+        domain={process.env.REACT_APP_AUTH0_DOMAIN}
+        client_id={process.env.REACT_APP_AUTH0_CLIENT_ID}
         redirect_uri={window.location.origin}
         onRedirectCallback={onRedirectCallback}
       >

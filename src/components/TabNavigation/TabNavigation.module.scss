@@ -26,6 +26,10 @@
     text-decoration: none;
   }
 
+  &:focus {
+    box-shadow: none;
+  }
+
   .icon {
     margin-bottom: 5px;
   }

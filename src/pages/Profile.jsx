@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useAuth0 } from '../react-auth0-spa';
+import axiosInstance from '../axiosApi';
 
 const Profile = () => {
-  const { isAuthenticated, logout } = useAuth0();
+  const { isAuthenticated, logout, getTokenSilently } = useAuth0();
 
   const handleLogout = () => {
     logout({ returnTo: window.location.origin });
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const token = await getTokenSilently();
+
+      const response = await axiosInstance.get('/profile/1', {headers: {Authorization: `Bearer ${token}`}});
+      console.log(response.data)
+    };
+
+    fetchData();
+  }, [getTokenSilently] );
 
   return (
     <div className="container">
