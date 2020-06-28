@@ -13,12 +13,13 @@ const Profile = () => {
     const fetchData = async () => {
       const token = await getTokenSilently();
 
-      const response = await axiosInstance.get('/profile/1', {headers: {Authorization: `Bearer ${token}`}});
+      const response = await axiosInstance.get('/profile', {headers: {Authorization: `Bearer ${token}`}});
       console.log(response.data)
     };
 
     fetchData();
-  }, [getTokenSilently] );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [] );
 
   return (
     <div className="container">
