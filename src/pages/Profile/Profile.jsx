@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth0 } from '../../react-auth0-spa';
 import axiosInstance from '../../axiosApi';
-import cn from 'classnames';
 
 import style from './Profile.module.scss';
 
