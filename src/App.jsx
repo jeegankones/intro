@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch } from 'react-router-dom';
 import Explore from './pages/Explore/Explore';
-import Profile from './pages/Profile';
+import Profile from './pages/Profile/Profile';
 import NotFound from './pages/NotFound';
 import GlobalLoader from './components/GlobalLoader/GlobalLoader';
 import Category from './pages/Category';

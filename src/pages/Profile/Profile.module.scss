@@ -1,0 +1,16 @@
+@import "src/scss/variables";
+
+.profileInfo {
+  padding: 1rem 0;
+}
+
+.profileItem {
+  border-bottom: 1px solid $io-light-grey;
+  padding: 1rem 0;
+}
+
+.amountEarned {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: $io-primary;
+}
