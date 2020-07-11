@@ -23,7 +23,7 @@ const LogoHeader = () => {
             <NavLink to="/" exact activeClassName={styles.active} className="mx-2">Explore</NavLink>
 
             {!isAuthenticated && (
-              <button type="button" className="btn btn-sm btn-primary mx-2" onClick={() => loginWithRedirect({})}>Log in</button>
+              <button type="button" className="btn btn-sm btn-primary mx-2" onClick={() => loginWithRedirect({appState: { targetUrl: '/profile' }})}>Log in</button>
             )}
 
             {isAuthenticated && (

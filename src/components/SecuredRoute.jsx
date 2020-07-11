@@ -15,7 +15,7 @@ const SecuredRoute = ({ component: Component, layout: Layout, path, ...rest }) =
       });
     };
     fn();
-  }, [loading, isAuthenticated, loginWithRedirect, path]);
+  }, [loading, isAuthenticated, loginWithRedirect]);
 
   const render = (props) => (isAuthenticated === true ? <Layout><Component {...props} /></Layout> : null);
 

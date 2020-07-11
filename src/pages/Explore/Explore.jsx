@@ -3,8 +3,7 @@ import cn from 'classnames';
 import { Link } from 'react-router-dom';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import CategoryList from '../../components/CategoryList/CategoryList';
-import RecommendedPlaces
-  from '../../components/RecommendedPlaces/RecommendedPlaces';
+import RecommendedPlaces from '../../components/RecommendedPlaces/RecommendedPlaces';
 import axiosInstance from '../../axiosApi';
 import CategoryPlaces from '../../components/CategoryPlaces/CategoryPlaces';
 import moneyIcon from './money-icon.svg';
@@ -12,9 +11,11 @@ import storeIcon from './store-icon.svg';
 import phoneIcon from './phone-icon.svg';
 
 import style from './Explore.module.scss';
+import useIsMountedRef from '../../utils/useIsMountedRef';
 
 const Explore = () => {
   const [categories, setCategories] = useState([]);
+  const isMountedRef = useIsMountedRef();
   const ref = React.createRef();
 
   const scrollToHiw = () => ref.current.scrollIntoView({
@@ -25,9 +26,11 @@ const Explore = () => {
   useEffect(() => {
     axiosInstance.get('/explore/categories')
       .then((response) => {
-        setCategories(response.data);
+        if (isMountedRef.current) {
+          setCategories(response.data);
+        }
       });
-  }, []);
+  }, [isMountedRef]);
 
   const categoryPlacesSections = categories.map((category) => (
     <CategoryPlaces category={category} key={category.category_id} />

@@ -5,16 +5,20 @@ import PlaceCard from '../PlaceCard/PlaceCard';
 
 import sharedStyle from '../../scss/shared.module.scss';
 import style from './RecommendedPlaces.module.scss';
+import useIsMountedRef from '../../utils/useIsMountedRef';
 
 const RecommendedPlaces = () => {
   const [places, setPlaces] = useState([]);
+  const isMountedRef = useIsMountedRef();
 
   useEffect(() => {
     axiosInstance.get('/explore/recommendations')
       .then((response) => {
-        setPlaces(response.data);
+        if (isMountedRef.current) {
+          setPlaces(response.data);
+        }
       });
-  }, []);
+  }, [isMountedRef]);
 
   const placesMapped = places.map((place) => (
     <PlaceCard

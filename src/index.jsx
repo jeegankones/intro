@@ -17,16 +17,16 @@ const onRedirectCallback = (appState) => {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router history={history}>
-      <Auth0Provider
-        domain={process.env.REACT_APP_AUTH0_DOMAIN}
-        client_id={process.env.REACT_APP_AUTH0_CLIENT_ID}
-        redirect_uri={window.location.origin}
-        onRedirectCallback={onRedirectCallback}
-      >
-        <App />
-      </Auth0Provider>
-    </Router>
+    <Auth0Provider
+      domain={process.env.REACT_APP_AUTH0_DOMAIN}
+      client_id={process.env.REACT_APP_AUTH0_CLIENT_ID}
+      redirect_uri={window.location.origin}
+      onRedirectCallback={onRedirectCallback}
+    >
+      <Router history={history}>
+        <App/>
+      </Router>
+    </Auth0Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

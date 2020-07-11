@@ -5,7 +5,7 @@ import axiosInstance from '../../axiosApi';
 import style from './Profile.module.scss';
 
 const Profile = () => {
-  const { isAuthenticated, logout, getTokenSilently } = useAuth0();
+  const { isAuthenticated, logout, loading, getTokenSilently } = useAuth0();
   const [profileData, setProfileData] = useState([]);
 
   const handleLogout = () => {
@@ -13,22 +13,28 @@ const Profile = () => {
   };
 
   useEffect(() => {
-    const fetchData = async () => {
+    if (loading) {
+      return;
+    }
+
+    const getData = async () => {
       const token = await getTokenSilently();
 
-      const response = await axiosInstance.get('/profile', {headers: {Authorization: `Bearer ${token}`}});
-      setProfileData(response.data);
+      axiosInstance.get('/profile', { headers: { 'Authorization': `Bearer ${token}` } })
+        .then((response) => {
+          setProfileData(response.data);
+        });
     };
 
-    fetchData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [] );
+    getData();
+  }, [loading, getTokenSilently]);
 
   return (
     <>
       <div className="container">
         <section className="d-flex flex-column">
-          <h1 className="mb-0">Welcome, <span className="text-muted"><br />{profileData.first_name}</span></h1>
+          <h1 className="mb-0">Welcome, <span
+            className="text-muted"><br/>{profileData.first_name}</span></h1>
           <section className="align-self-center d-flex flex-column align-items-center">
             <div className={style.amountEarned}>
               ${profileData.current_reward_dollars}
@@ -55,7 +61,8 @@ const Profile = () => {
               <div>{profileData.contact_email}</div>
             </div>
           </div>
-          {isAuthenticated && <button type="button" className="btn btn-secondary align-self-center" onClick={handleLogout}>Log out</button>}
+          {isAuthenticated && <button type="button" className="btn btn-secondary align-self-center"
+                                      onClick={handleLogout}>Log out</button>}
         </section>
       </div>
     </>
