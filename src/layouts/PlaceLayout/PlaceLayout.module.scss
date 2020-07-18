@@ -1,0 +1,19 @@
+@import "../../scss/bootstrap/bootstrap-mixins";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  @include media-breakpoint-down(sm) {
+    padding-bottom: calc(75px + 80px);
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  footer {
+    flex-shrink: 0;
+  }
+}

@@ -30,7 +30,7 @@ html {
   }
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
   font-weight: bold;
 }
 
@@ -42,3 +42,17 @@ h2 {
   margin-bottom: 1rem;
 }
 
+// Modals
+
+.modal-content {
+  border: none;
+  border-radius: .5rem;
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal-footer {
+  border: none;
+}

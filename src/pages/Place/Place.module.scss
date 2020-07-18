@@ -1,17 +1,6 @@
 @import "src/scss/bootstrap/bootstrap-mixins";
 @import "src/scss/variables";
 
-.place {
-  hr {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-
-    @include media-breakpoint-up(md) {
-      margin-bottom: 2rem;
-    }
-  }
-}
-
 .imageContainer {
   display: flex;
   height: 200px;
@@ -44,5 +33,28 @@
 
   p {
     margin-bottom: 0;
+  }
+}
+
+.placeSection {
+  border-top: solid 1px $io-lighter-grey;
+  padding: 3rem 0;
+}
+
+.checkInSection {
+  @include media-breakpoint-down(md) {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 75px;
+    background-color: $io-lightest-grey;
+    z-index: 1;
+    padding: 0;
+    height: 80px;
+    margin-bottom: 0;
+  }
+
+  .reward {
+    font-size: 2rem;
   }
 }

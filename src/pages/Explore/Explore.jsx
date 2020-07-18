@@ -76,7 +76,7 @@ const Explore = () => {
               <span className={style.hiw2}>
                 <img src={phoneIcon} alt="Phone icon" />
               </span>
-              <div>Check in on intro</div>
+              <div>Check in on Intro</div>
             </li>
             <li>
               <span className={style.hiw3}>
